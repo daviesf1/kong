@@ -2,15 +2,15 @@
 
 
 
-http://localhost:9000/
+http://getkong.org/index.html
 
 
 
-http://localhost:9000/docs/
+http://getkong.org/docs/index.html
 
 
 
-http://localhost:9000/screencasts/
+http://getkong.org/screencasts/index.html
 
 
 
