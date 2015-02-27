@@ -2,7 +2,7 @@
 
 
 
-http://getkong.org/index.html
+http://getkong.org/download/index.html
 
 
 
@@ -11,6 +11,10 @@ http://getkong.org/docs/index.html
 
 
 http://getkong.org/screencasts/index.html
+
+
+
+http://getkong.org/index.html
 
 
 
