@@ -1051,7 +1051,8 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
-.navbar-nav .button {
+.navbar-nav .button,
+.page-download .tab-list a {
   border-radius: 3px;
   letter-spacing: 0;
   font-weight: 600;
@@ -1106,7 +1107,11 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
+  font-family: 'Whitney SSm A', 'Whitney SSm B', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   border-radius: 3px;
+  border-color: #ced2d6;
+  box-shadow: inset 1px 2px 0 0 rgba(242, 242, 242, 0.5);
+  height: 44px;
 }
 input[type="email"]:focus,
 input[type="number"]:focus,
@@ -1717,24 +1722,29 @@ nav a.active {
 .content pre:hover {
   overflow: auto;
 }
-.instructions-steps {
+.instructions-steps,
+.page-download .content ol {
   list-style: none;
   padding-left: 26px;
   counter-reset: step;
 }
-.instructions-steps .instructions-step-item {
+.instructions-steps .instructions-step-item,
+.page-download .content ol li {
   position: relative;
   padding: 10px 0 20px 44px;
   border-left: 1px solid #ebebeb;
   margin: 0;
 }
-.instructions-steps .instructions-step-item *:last-child {
+.instructions-steps .instructions-step-item *:last-child,
+.page-download .content ol li *:last-child {
   margin-bottom: 0;
 }
-.instructions-steps .instructions-step-item:last-child {
+.instructions-steps .instructions-step-item:last-child,
+.page-download .content ol li:last-child {
   border: 0 none;
 }
-.instructions-steps .instructions-step-item:before {
+.instructions-steps .instructions-step-item:before,
+.page-download .content ol li:before {
   counter-increment: step;
   content: counter(step);
   -moz-box-sizing: border-box;
@@ -1867,7 +1877,7 @@ nav a.active {
 }
 @media (min-width: 1000px) {
   .intro-section {
-    min-height: 450px;
+    height: 450px;
     text-align: left;
     background-size: contain;
     background: url("../assets/images/net/net-1x.png") no-repeat right center;
@@ -2036,6 +2046,193 @@ nav a.active {
 }
 .page-contribute .page-section {
   display: none;
+}
+.page-download .select-download-method {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.page-download .select-download-method h2 {
+  font-family: 'Whitney A', 'Whitney B', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  color: #000;
+  font-weight: 600;
+  margin: 0;
+}
+.page-download .select-download-method p {
+  margin: 8px 0 0;
+}
+.page-download .tab-list-wrap {
+  border-bottom: 1px solid #bde6cf;
+  padding-bottom: 40px;
+}
+.page-download .tab-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 -20px 0 -20px;
+}
+.page-download .tab-list li {
+  float: left;
+  margin: 0;
+  width: 20%;
+  padding: 0 20px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+@media (max-width: 900px) {
+  .page-download .tab-list li {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 800px) {
+  .page-download .tab-list li {
+    float: none;
+    width: auto;
+    margin-bottom: 10px;
+  }
+}
+.page-download .tab-list li:before,
+.page-download .tab-list li:after {
+  display: none;
+  content: "";
+  position: absolute;
+  bottom: -41px;
+  border: 0 none;
+  width: 0;
+  height: 0;
+  left: 50%;
+  margin-left: -8px;
+}
+.page-download .tab-list li:before {
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 9px solid #bde6cf;
+}
+.page-download .tab-list li:after {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 8px solid #fff;
+  margin-left: -7px;
+}
+.page-download .tab-list a {
+  display: block;
+  text-align: center;
+  border: 1px solid #23ab5f;
+  background-image: -webkit-linear-gradient(bottom, rgba(189, 230, 207, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
+  background-image: linear-gradient(to top, rgba(189, 230, 207, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
+  font-size: 15px;
+  height: 48px;
+  line-height: 48px;
+  white-space: nowrap;
+  padding: 0;
+}
+.page-download .tab-list .active:before,
+.page-download .tab-list .active:after {
+  display: block;
+}
+@media (max-width: 800px) {
+  .page-download .tab-list .active:before,
+  .page-download .tab-list .active:after {
+    display: none;
+  }
+}
+.page-download .tab-list .active a {
+  text-shadow: 0 -1px 0 rgba(0, 1, 1, 0.2);
+  padding: 1px;
+  border: 0 none;
+  cursor: default;
+  background-color: #23ab5f;
+  background-image: -webkit-linear-gradient(top, #0b803b, #149652);
+  background-image: linear-gradient(to bottom, #0b803b, #149652);
+  color: #fff;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.3);
+}
+.page-download .tab-content .tab-pane {
+  display: none;
+}
+.page-download .tab-content .active {
+  display: block;
+}
+.page-download .content {
+  padding: 35px 0 0;
+}
+.page-download .content h3 {
+  font-size: 28px;
+  color: #505659;
+  margin-bottom: .7em;
+}
+.page-download .content ol {
+  padding-left: 19px;
+}
+.page-download .content ol li {
+  padding: 7px 0 30px 30px;
+}
+.page-download .content ol li:last-child {
+  padding-bottom: 15px;
+}
+.page-download .content ol li:before {
+  color: #505659;
+  font-size: 13px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  left: -19px;
+}
+.page-download section {
+  padding: 80px 0;
+}
+.page-download .faq-section {
+  background-color: #fdfdfd;
+  border-top: 2px solid #e1e4e5;
+  border-bottom: 2px solid #e1e4e5;
+}
+.page-download .faq-section h4 {
+  font-size: 19px;
+  font-family: 'Whitney A', 'Whitney B', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+.page-download .faq-section p {
+  margin-bottom: 0.5em;
+}
+.page-download .faq-section ul {
+  margin: 0;
+}
+.page-download .faq-section ul li {
+  margin: 0;
+  list-style: none;
+}
+.page-download .faq-section ul li:before {
+  content: "\203a";
+  display: inline-block;
+  width: 10px;
+  color: #23ab5f;
+}
+.page-download .subscribe-section {
+  min-height: 150px;
+}
+.page-download .subscribe-section .form-message {
+  display: none;
+  font-size: 20px;
+  text-align: center;
+  line-height: 44px;
+}
+.page-download .subscribe-section .success-message {
+  color: #23ab5f;
+}
+.page-download .subscribe-section .error-message {
+  color: #bb2616;
+}
+.page-download .subscribe-section h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+.page-download .subscribe-section input,
+.page-download .subscribe-section button {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=maps/styles.css.map */
